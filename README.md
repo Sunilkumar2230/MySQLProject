@@ -60,108 +60,29 @@ The database contains the following tables:
 | `best`       | VARCHAR(10)   | Best bowling figures in a match   |
 | `economy`    | DECIMAL(4, 2) | Economy rate                      |
 
-## Getting Started
 
-To set up this project locally, follow these steps:
+## Screenshots
 
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/SunilKumar2230/mysqlproject.git
-    cd ipl-history-database
-    ```
-
-2. **Create and Use the Database**:
-    ```sql
-    -- Create IPL Database
-    CREATE DATABASE IPL;
-
-    -- Use the IPL Database
-    USE IPL;
-    ```
-
-3. **Create Tables**:
-    ```sql
-    -- Create Teams Table
-    CREATE TABLE Teams (
-        team_id INT PRIMARY KEY AUTO_INCREMENT,
-        team_name VARCHAR(100) NOT NULL,
-        captain_name VARCHAR(100) NOT NULL
-    );
-
-    -- Create WinnerList Table
-    CREATE TABLE WinnerList (
-        year INT PRIMARY KEY,
-        venue VARCHAR(100),
-        winner VARCHAR(100),
-        runner_up VARCHAR(100),
-        player_of_the_series VARCHAR(100),
-        top_run_scorer VARCHAR(100),
-        highest_wicket_taker VARCHAR(100)
-    );
-
-    -- Create BattingRecord Table
-    CREATE TABLE BattingRecord (
-        year INT,
-        player_name VARCHAR(100),
-        team VARCHAR(100),
-        matches INT,
-        innings INT,
-        runs INT,
-        highest_score INT,
-        average DECIMAL(5, 2),
-        strike_rate DECIMAL(5, 2),
-        PRIMARY KEY (year, player_name)
-    );
-
-    -- Create BowlingRecord Table
-    CREATE TABLE BowlingRecord (
-        year INT,
-        player_name VARCHAR(100),
-        team VARCHAR(100),
-        matches INT,
-        innings INT,
-        wickets INT,
-        best VARCHAR(10),
-        economy DECIMAL(4, 2),
-        PRIMARY KEY (year, player_name)
-    );
-    ```
-
-4. **Insert Data**:
-    - Example data for each table is provided in the `insert_data.sql` file. Run this file to populate the database.
-    ```sql
-    SOURCE insert_data.sql;
-    ```
-
-## Usage
-
-After setting up the database, you can run various SQL queries to retrieve information about IPL teams, winners, and player statistics. Here are some example queries:
+Here are some example queries:
 
 - **Get all teams**:
-    ```sql
-    SELECT * FROM Teams;
-    ```
+- ![image](https://github.com/Sunilkumar2230/MySQLProject/assets/171160740/2d3ad390-abbc-4248-94ec-694bd21eed95)  
 
 - **Get the winner of a specific year**:
-    ```sql
-    SELECT winner FROM WinnerList WHERE year = 2020;
-    ```
+- ![image](https://github.com/Sunilkumar2230/MySQLProject/assets/171160740/822c53ec-8308-4798-ba38-d820cf52bce5)
+- ![image](https://github.com/Sunilkumar2230/MySQLProject/assets/171160740/626d45ec-c314-401b-84aa-ec6e5b96b3bb)
+
 
 - **Get top run scorers**:
-    ```sql
-    SELECT player_name, runs FROM BattingRecord ORDER BY runs DESC;
-    ```
+- ![Screenshot 2024-06-11 194522](https://github.com/Sunilkumar2230/MySQLProject/assets/171160740/8d6edede-4417-4592-b65c-7a90d8056b95)
+- ![Screenshot 2024-06-11 194813](https://github.com/Sunilkumar2230/MySQLProject/assets/171160740/24666c33-b704-4f17-8f8c-8323037c949b)
+
 
 - **Get best bowlers**:
-    ```sql
-    SELECT player_name, wickets FROM BowlingRecord ORDER BY wickets DESC;
-    ```
+- ![Screenshot 2024-06-11 194959](https://github.com/Sunilkumar2230/MySQLProject/assets/171160740/4a5b1dd6-67a0-4502-9365-c9aa5b65e262)
+- ![Screenshot 2024-06-11 195207](https://github.com/Sunilkumar2230/MySQLProject/assets/171160740/541fab4e-265b-443e-a454-7941b1443be3)
 
-## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
-## License
-
-This project is licensed under the MIT License.
+- **Get Team and Captain Names for Each Year's Winner**:
+- ![Screenshot 2024-06-11 195819](https://github.com/Sunilkumar2230/MySQLProject/assets/171160740/5aed6229-c7b2-494f-8b55-616c855b1bf4)
 
