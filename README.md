@@ -66,7 +66,7 @@ To set up this project locally, follow these steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-username/ipl-history-database.git
+    git clone https://github.com/SunilKumar2230/mysqlproject.git
     cd ipl-history-database
     ```
 
